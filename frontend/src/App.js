@@ -167,7 +167,7 @@ class App extends React.Component {
                 <div style={{ flex: 1 }}>
                   <input
                     id="submit"
-                    className="btn btn-warning"
+                    className="btn btn-primary"
                     type="submit"
                     name="Add"
                   />
@@ -179,7 +179,10 @@ class App extends React.Component {
             {task.map((task, index) => {
               return (
                 <div key={index} className="task-wrapper flex-wrapper">
-                  <div onClick={() => this.strikeUnstrike(task)} style={{ flex: 7 }}>
+                  <div
+                    onClick={() => this.strikeUnstrike(task)}
+                    style={{ flex: 7 }}
+                  >
                     {task.completed === true ? (
                       <strike>{task.title}</strike>
                     ) : (
@@ -189,7 +192,7 @@ class App extends React.Component {
                   <div style={{ flex: 1 }}>
                     <button
                       onClick={() => this.startEdit(task)}
-                      className="btn btn-sm btn-outline-info"
+                      className="btn btn-sm btn-outline-secondary"
                     >
                       Edit
                     </button>
@@ -199,9 +202,9 @@ class App extends React.Component {
                       onClick={() => {
                         this.deleteItem(task);
                       }}
-                      className="btn btn-sm btn-outline-dark delete"
+                      className="btn btn-sm btn-outline-danger"
                     >
-                      -
+                      Delete
                     </button>
                   </div>
                 </div>
