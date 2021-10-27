@@ -1,5 +1,5 @@
 # To-Do-app
-Project of a to-do application
+Project of a To-Do application
 
 This application was written using Django, React.js, Bootstrap and allows you to:
 
